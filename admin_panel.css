@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main-container{
+    background: linear-gradient(0deg, #54eaec, #56e4fe, #6fdcff, #8ed3ff, #adc9ff, #c7c0f8, #d9b7e7, #e4b1d4);
+    min-height: 100vh;
+    height: 100%;
+    max-width: 100vw;
+    width:100%;
+    margin: 0;
+}
+ul li{
+    list-style: none;
+}
+nav{
+    /* border:2px solid red; */
+    background-color: #d563f7;
+    width:100%;
+    margin: 0;
+    color:white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.account-info{
+    display: flex;
+    width:15%;
+    /* border:2px solid red; */
+    height: 100%;
+}
+
+nav ul{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-bottom: 0;
+    margin-top: 3%;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration:none;
+    color:white;
+}
+
+.container{
+    /* border:2px solid black; */
+}
+
+#jumbo{
+    padding: 1rem 0;
+    background-color: hsl(273, 50%, 79%);
+}
+
+.list-group a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#container{
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.151);
+    backdrop-filter: blur(8px);
+    border: 1px solid white;
+}
+
+.form-area{
+    background-color:rgba(255, 255, 255, 0.336);
+    border:1px solid black;
+    padding: 0.5rem;
+}
+
+.input-group{
+    margin-bottom:.5rem !important;
+}
+
+table.table-bordered{
+    border:1px solid blue;
+    margin-top:20px;
+  }
+table.table-bordered > thead > tr > td{
+    border:1px solid blue;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid blue;
+}

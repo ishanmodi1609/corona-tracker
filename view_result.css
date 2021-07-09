@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(78, 78, 78);
+    overflow-x: hidden;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.heading{
+    font-family: 'ABeeZee', sans-serif;
+    font-size:2rem;
+    clip-path: polygon(0 100%, 0 0, 0 0, 0 53%, 0 53%, 0 100%);
+    color:rgb(126, 126, 126);
+    letter-spacing:1.2px;
+    word-spacing: 1.3px;
+    
+    animation:heading-appear 2s ease-in-out forwards 0s, heading .5s ease-in-out forwards 2.2s;
+}
+
+strong{
+    font-family: 'New Tegomin', serif;
+}
+
+.chart-container{
+    flex:1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+    grid-gap:1em;
+}
+
+.chart:nth-child(odd){
+    transform:translateX(-110%);
+    animation:appearLeft 1s ease-in-out forwards 2.8s;
+}
+.chart:nth-child(even){
+    transform:translateX(110%);
+    animation:appearRight 1s ease-in-out forwards 2.8s;
+}
+
+.chart:nth-child(4){
+  font-size: 2rem;
+  display:grid;
+  place-content: center; 
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: rgba(255, 255, 255, 0.233);
+  backdrop-filter: blur(5px);
+
+}
+a:hover{
+    transform: scale(1.5);
+    word-spacing: 1.5px;
+    letter-spacing:1.2px;
+}
+
+a{
+    color:aqua;
+    text-decoration: none;
+    transition: transform 500ms ease-in-out;
+}
+
+@keyframes heading-appear{
+    from{
+        clip-path: polygon(0 100%, 0 0, 0 0, 0 53%, 0 53%, 0 100%);
+    }
+    to{
+        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 52%, 100% 100%, 0 100%);
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+}
+
+@keyframes heading {
+    from{
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+    }   
+    to{
+        text-shadow: 0 0 1px rgb(255, 255, 255);
+    } 
+}
+
+@keyframes appearRight{
+    from{
+        transform:translateX(110%);
+    }
+    to{
+        transform:translateX(0%);
+    }
+}
+
+@keyframes appearLeft{
+    from{
+        transform:translateX(-110%);
+    }
+    to{
+        transform:translateX(0%);
+    }
+}
